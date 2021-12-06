@@ -1,0 +1,127 @@
+.tail {
+  width: 22vmin;
+  height: 46vmin;
+  bottom: 0;
+  right: 17%;
+  border-radius: 0 0 14vmin;
+}
+
+.tail::before {
+  width: 38vmin;
+  z-index: -1000;
+  aspect-ratio: 1;
+  transform: rotate(45deg);
+  border-radius: 100%;
+  top: -41%;
+  right: -73%;
+}
+
+.tail::after {
+  width: 7vmin;
+  height: 44vmin;
+}
+
+/****/
+
+.body {
+  height: 30vmin;
+  width: 25vmin;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 0;
+  border-top-left-radius: 53%;
+}
+
+.ears {
+  width: 4vmin;
+  aspect-ratio: 1/2;
+  border-bottom-right-radius: 8vmin;
+  border-top-right-radius: 8vmin;
+  top: -26.5%;
+}
+
+.ear-left {
+  transform: rotateY(180deg);
+  left: 29.5%;
+}
+
+.ear-right {
+  right: -16.25%;
+}
+
+.eye {
+  width: 8vmin;
+  aspect-ratio: 1;
+  background: white;
+  overflow: hidden;
+  top: 21%;
+  left: 52%;
+  border-radius: 100%;
+}
+
+.eye::before {
+  width: 4vmin;
+  aspect-ratio: 1;
+  background: var(--black);
+  border-radius: 50%;
+}
+
+.nose {
+  background: var(--black);
+  width: 2vmin;
+  height: 1vmin;
+  left: 46%;
+  transform: translate(-50%, 0);
+  top: 51%;
+  border-radius: 0 0 2vmin 2vmin;
+}
+
+.mouth {
+  width: 8vmin;
+  aspect-ratio: 2;
+  background: white;
+  border: 12px solid var(--black);
+  border-top: 0px transparent;
+  top: 60%;
+  right: 35%;
+  border-radius: 0 0 8vmin 8vmin;
+}
+
+.belly {
+  width: 14vmin;
+  aspect-ratio: 2;
+  border-radius: 14vmin 14vmin 0 0;
+  bottom: -1px;
+  left: 21%;
+  z-index: -1000;
+  background: var(--belly-cute);
+}
+
+.feet {
+  width: 7vmin;
+  aspect-ratio: 2;
+  border-radius: 7vmin 7vmin 0 0;
+  background: var(--black);
+  bottom: -1px;
+  left: -7%;
+  box-shadow: 21vmin 0 var(--black);
+}
+
+.shadow {
+  width: 200px;
+  height: 30px;
+  margin: auto;
+  margin-top: -20px;
+  background: #000;
+  opacity: 0.6;
+  display: block;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  -webkit-transform: translateY(60px);
+  -ms-transform: translateY(60px);
+  transform: translateY(60px);
+  -webkit-filter: blur(17px);
+  filter: blur(17px);
+  bottom: 5%;
+  left: 33%;
+}

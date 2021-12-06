@@ -1,0 +1,179 @@
+@use "../globals/" as *;
+
+.cartoon-scary {
+  left: 60%;
+
+  .tail {
+    background: darken($body-scary, 40%);
+  }
+
+  .tail::before {
+    background: conic-gradient(
+      from 180deg,
+      darken($body-scary, 40%) 0,
+      darken($body-scary, 40%) 80%,
+      darken($body-scary, 50%) 0,
+      darken($body-scary, 50%) 100%
+    );
+    box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.6);
+  }
+
+  .tail::after {
+    background: darken($body-scary, 40%);
+    box-shadow: inset 60px -60px 60px -60px hsla(0, 0%, 0%, 0.6);
+  }
+
+  .tail-bites {
+    background: var(--background);
+    width: 27%;
+    right: -15%;
+    aspect-ratio: 1;
+    border-radius: 100%;
+  }
+
+  .tail-bites::before {
+    background: var(--background);
+    width: 75%;
+    left: -109%;
+    top: -47%;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    box-shadow: 21vmin 20vmin var(--background);
+  }
+
+  .body {
+    background: var(--body-scary);
+    border: 1px solid var(--body-scary);
+  }
+
+  .ears {
+    background-color: var(--body-scary);
+  }
+
+  .ear-left {
+    transform: rotate(152deg);
+    left: 20%;
+    top: -21.5%;
+  }
+
+  .ear-right {
+    right: -17%;
+    // transform: rotate(95deg);
+    top: 0;
+    animation: earSwing 0.6s linear 0s infinite alternate;
+    -webkit-animation: earSwing 0.6s linear 0s infinite alternate;
+    transform-origin: top left;
+  }
+
+  .cut {
+    width: 10%;
+    height: 20%;
+    border: solid black;
+    border-bottom: transparent;
+    border-left: transparent;
+    border-top: transparent;
+    transform: rotate(-58deg);
+    right: 17%;
+    top: 7%;
+  }
+
+  .cut::before {
+    width: 10%;
+    height: 20%;
+    border: solid black;
+    border-bottom: transparent;
+    border-left: transparent;
+    border-top: transparent;
+    transform: rotate(88deg);
+    top: 3px;
+    right: -4px;
+    // box-shadow: 2vmin 0 var(--black);
+  }
+
+  .cut::after {
+    width: 10%;
+    height: 20%;
+    border: solid var(--black);
+    border-bottom: transparent;
+    border-left: transparent;
+    border-top: transparent;
+    transform: rotate(88deg);
+    top: 17px;
+    right: -4px;
+    box-shadow: 2vmin 0 var(--black);
+  }
+
+  .eye {
+    box-shadow: 4px 2px 0 8px darken($body-scary, 30%);
+  }
+
+  .eye-left {
+    left: 9%;
+  }
+
+  .eye-right {
+    left: 55%;
+  }
+
+  .eye-left::before {
+    width: 2vmin;
+    top: 22%;
+    left: 14%;
+  }
+
+  .eye-right::before {
+    width: 3vmin;
+    bottom: 22%;
+    right: 14%;
+  }
+
+  .nose {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    animation: none;
+    transform: rotate(180deg);
+    border-radius: 0 0 0 0;
+  }
+
+  .mouth {
+    background: none;
+    border: 3px solid black;
+    border: {
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
+    transform: rotate(-4deg);
+  }
+
+  .mouth::before {
+    background: white;
+    width: 1.5vmin;
+    height: 1.75vmin;
+    left: 10px;
+    border-radius: 0 0 1.5vmin 1.5vmin;
+    box-shadow: 3vmin 0 white;
+  }
+
+  .mouth::after {
+    background: white;
+    width: 2vmin;
+    height: 1.75vmin;
+    left: 50px;
+    border-radius: 0 0 1.5vmin 1.5vmin;
+    right: 0;
+  }
+
+  .belly {
+    background: darken($body-scary, 40%);
+  }
+}
+
+@keyframes earSwing {
+  0% {
+    transform: rotate(-30deg);
+  }
+
+  100% {
+    transform: rotate(-25deg);
+  }
+}

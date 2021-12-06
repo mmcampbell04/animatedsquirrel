@@ -1,0 +1,109 @@
+// CUTE SQUIRREL
+
+.cartoon-cute {
+  left: 10%;
+
+  .tail {
+    background: var(--tail-cute);
+  }
+
+  .tail::before {
+    background: conic-gradient(
+      from 180deg,
+      var(--tail-cute) 0,
+      var(--tail-cute) 80%,
+      var(--tail-accent-cute) 0,
+      var(--tail-accent-cute) 100%
+    );
+    box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.2);
+  }
+
+  .tail::after {
+    background: var(--tail-cute);
+    box-shadow: inset 60px -60px 60px -60px rgba(0, 0, 0, 0.2);
+  }
+
+  .body {
+    background: var(--body-cute);
+    border: 1px solid var(--body-cute);
+  }
+
+  .ears {
+    background-color: var(--body-cute);
+  }
+
+  .eye {
+    animation: blink 10s infinite ease-in-out;
+    transition: all 0.1s ease-in-out;
+  }
+
+  .eye + .eye {
+    left: auto;
+    right: 51%;
+  }
+  .eye::before {
+    top: 23%;
+    left: 23%;
+  }
+
+  .eye::after {
+    width: 1vmin;
+    height: 1.5vmin;
+    border-radius: 50%;
+    background: white;
+    top: 16%;
+    left: 43%;
+    transform: rotate(330deg);
+  }
+
+  .nose {
+    animation: noseWiggle 3s infinite ease-in-out;
+  }
+
+  .belly {
+    background: var(--belly-cute);
+  }
+}
+
+@keyframes blink {
+  0%,
+  4%,
+  6%,
+  49%,
+  51%,
+  53%,
+  100% {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+  5%,
+  50%,
+  52% {
+    -webkit-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+  }
+}
+
+@keyframes noseWiggle {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: translateY(-1px);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: translateY(2px);
+  }
+
+  80% {
+    transform: translateY(3px);
+  }
+}

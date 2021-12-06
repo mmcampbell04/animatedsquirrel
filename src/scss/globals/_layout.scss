@@ -1,0 +1,28 @@
+html,
+body {
+  overflow: hidden;
+  background: var(--background);
+}
+
+//
+
+.cartoon {
+  position: absolute;
+  width: 60vmin;
+  height: 60vmin;
+
+  top: 10%;
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b::before,
+.a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}

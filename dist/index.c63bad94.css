@@ -1,10 +1,7 @@
-.cartoon-cute {
-  left: -10%;
-}
 .cartoon-cute .tail {
   background: var(--tail-cute);
 }
-.cartoon-cute .top-tail {
+.cartoon-cute .tail::before {
   background: conic-gradient(from 180deg, var(--tail-cute) 0, var(--tail-cute) 80%, var(--tail-accent-cute) 0, var(--tail-accent-cute) 100%);
   box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.2);
 }
@@ -87,18 +84,13 @@
 
 html,
 body {
-  overflow: hidden;
   background: var(--background);
 }
 
-.wrapper {
-  display: flex;
-}
-
 .cartoon {
-  position: relative;
-  width: 50vw;
-  height: 75vh;
+  position: absolute;
+  width: 60vmin;
+  height: 60vmin;
   top: 10%;
 }
 
@@ -115,45 +107,62 @@ body {
   box-sizing: border-box;
 }
 
+@media (min-width: 320px) and (max-width: 528px) {
+  .cartoon-scary {
+    top: 55%;
+    left: 14%;
+  }
+}
+@media (min-width: 529px) and (max-width: 1000px) {
+  .cartoon-scary {
+    top: 60%;
+    left: 17%;
+  }
+}
+@media (min-width: 1001px) {
+  .cartoon-scary {
+    left: 47%;
+  }
+}
 .tail {
-  width: 25%;
-  height: 70%;
-  bottom: -1%;
-  left: 52%;
-  border-radius: 0 0 110px;
+  width: 22vmin;
+  height: 46vmin;
+  bottom: 0;
+  right: 16%;
+  border-radius: 0 0 14vmin;
 }
 
-.top-tail {
-  width: 45%;
-  height: 55%;
+.tail::before {
+  width: 38vmin;
+  z-index: -1000;
+  aspect-ratio: 1;
   transform: rotate(45deg);
   border-radius: 100%;
-  top: 3%;
-  left: 52.25%;
+  top: -41%;
+  right: -73%;
 }
 
 .tail::after {
-  width: 50%;
-  height: 100%;
+  width: 7vmin;
+  height: 44vmin;
 }
 
 /****/
 .body {
-  height: 45%;
-  width: 30%;
+  height: 30vmin;
+  width: 25vmin;
   left: 50%;
   transform: translate(-50%, 0);
   bottom: 0;
   border-top-left-radius: 53%;
-  z-index: 2;
 }
 
 .ears {
-  width: 15%;
-  height: 20%;
-  border-bottom-right-radius: 50px;
-  border-top-right-radius: 50px;
-  top: -19.5%;
+  width: 4vmin;
+  aspect-ratio: 1/2;
+  border-bottom-right-radius: 8vmin;
+  border-top-right-radius: 8vmin;
+  top: -26.5%;
 }
 
 .ear-left {
@@ -162,12 +171,12 @@ body {
 }
 
 .ear-right {
-  right: -15.25%;
+  right: -16.25%;
 }
 
 .eye {
-  width: 30%;
-  height: 25%;
+  width: 8vmin;
+  aspect-ratio: 1;
   background: white;
   overflow: hidden;
   top: 21%;
@@ -176,79 +185,79 @@ body {
 }
 
 .eye::before {
-  width: 50%;
-  height: 50%;
+  width: 4vmin;
+  aspect-ratio: 1;
   background: var(--black);
-  border-radius: 100%;
+  border-radius: 50%;
 }
 
 .nose {
   background: var(--black);
-  width: 8%;
-  height: 4%;
+  width: 2vmin;
+  height: 1vmin;
   left: 46%;
   transform: translate(-50%, 0);
   top: 51%;
-  border-radius: 0 0 50% 50%;
+  border-radius: 0 0 2vmin 2vmin;
 }
 
 .mouth {
-  width: 30%;
-  height: 13%;
+  width: 9vmin;
+  aspect-ratio: 2;
   background: white;
   border: 12px solid var(--black);
   border-top: 0px transparent;
   top: 60%;
-  left: 34%;
-  border-radius: 0 0 50px 50px;
+  right: 31%;
+  border-radius: 0 0 8vmin 8vmin;
 }
 
 .belly {
-  width: 60%;
-  height: 21%;
-  border-radius: 100px 100px 0 0;
-  bottom: -1px;
+  width: 14vmin;
+  aspect-ratio: 2;
+  border-radius: 14vmin 14vmin 0 0;
+  bottom: -1%;
   left: 21%;
+  z-index: -1000;
   background: var(--belly-cute);
 }
 
 .feet {
-  width: 20%;
-  height: 8%;
-  border-radius: 50px 50px 0 0;
+  width: 7vmin;
+  aspect-ratio: 2;
+  border-radius: 7vmin 7vmin 0 0;
   background: var(--black);
-  bottom: -1px;
-  left: 10%;
-  box-shadow: 16vmin 0 var(--black);
+  bottom: -1%;
+  left: -7%;
+  box-shadow: 21vmin 0 var(--black);
 }
 
 .cartoon-scary .tail {
   background: #333333;
 }
-.cartoon-scary .top-tail {
+.cartoon-scary .tail::before {
   background: conic-gradient(from 180deg, #333333 0, #333333 80%, #191919 0, #191919 100%);
   box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.3);
-}
-.cartoon-scary .tail-bites {
-  background: var(--background);
-  width: 25%;
-  height: 25%;
-  left: 82%;
-  top: 12%;
-  border-radius: 100%;
-}
-.cartoon-scary .tail-bites::before {
-  background: var(--background);
-  width: 64%;
-  height: 76%;
-  left: -98%;
-  top: -46%;
-  border-radius: 100%;
-  box-shadow: 21vmin 20vmin var(--background);
 }
 .cartoon-scary .tail::after {
   background: #333333;
   box-shadow: inset 60px -60px 60px -60px rgba(0, 0, 0, 0.3);
+}
+.cartoon-scary .tail-bites {
+  background: var(--background);
+  width: 27%;
+  right: -15%;
+  aspect-ratio: 1;
+  border-radius: 100%;
+}
+.cartoon-scary .tail-bites::before {
+  background: var(--background);
+  width: 75%;
+  left: -109%;
+  top: -47%;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  box-shadow: 21vmin 20vmin var(--background);
 }
 .cartoon-scary .body {
   background: var(--body-scary);
@@ -260,10 +269,10 @@ body {
 .cartoon-scary .ear-left {
   transform: rotate(152deg);
   left: 20%;
-  top: -14.5%;
+  top: -21.5%;
 }
 .cartoon-scary .ear-right {
-  right: -16%;
+  right: -17%;
   top: 0;
   animation: earSwing 0.6s linear 0s infinite alternate;
   -webkit-animation: earSwing 0.6s linear 0s infinite alternate;
@@ -278,50 +287,47 @@ body {
   border-top: transparent;
   transform: rotate(-58deg);
   right: 17%;
-  top: 3%;
+  top: 7%;
 }
 .cartoon-scary .cut::before {
   width: 10%;
-  height: 27%;
+  height: 25%;
   border: solid black;
   border-bottom: transparent;
   border-left: transparent;
   border-top: transparent;
   transform: rotate(88deg);
-  top: 4%;
-  right: -10%;
+  top: 3px;
+  right: -4px;
 }
 .cartoon-scary .cut::after {
   width: 10%;
-  height: 27%;
+  height: 25%;
   border: solid var(--black);
   border-bottom: transparent;
   border-left: transparent;
   border-top: transparent;
   transform: rotate(88deg);
-  top: 33%;
-  right: -10%;
-  box-shadow: 17px 0 var(--black);
+  top: 17px;
+  right: -4px;
+  box-shadow: 2vmin 0 var(--black);
 }
 .cartoon-scary .eye {
   box-shadow: 4px 2px 0 8px #191919;
 }
 .cartoon-scary .eye-left {
-  left: 12%;
+  left: 9%;
 }
 .cartoon-scary .eye-right {
   left: 55%;
 }
 .cartoon-scary .eye-left::before {
-  width: 25%;
-  height: 25%;
-  border-radius: 100%;
+  width: 2vmin;
   top: 22%;
   left: 14%;
 }
 .cartoon-scary .eye-right::before {
-  width: 40%;
-  height: 40%;
+  width: 3vmin;
   bottom: 22%;
   right: 14%;
 }
@@ -345,18 +351,18 @@ body {
   height: 1.75vmin;
   left: 10px;
   border-radius: 0 0 1.5vmin 1.5vmin;
-  box-shadow: 2vmin 0 white;
+  box-shadow: 3vmin 0 white;
 }
 .cartoon-scary .mouth::after {
   background: white;
   width: 2vmin;
   height: 1.75vmin;
-  left: 50px;
+  left: 77%;
   border-radius: 0 0 1.5vmin 1.5vmin;
   right: 0;
 }
 .cartoon-scary .belly {
-  background: var(--belly-cute);
+  background: #bfbfbf;
 }
 
 .cartoon-scary:hover .eye-left::before {

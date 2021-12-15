@@ -106,22 +106,3 @@
   left: 10%;
   box-shadow: 16vmin 0 var(--black);
 }
-
-.shadow {
-  width: 200px;
-  height: 30px;
-  margin: auto;
-  margin-top: -20px;
-  background: #000;
-  opacity: 0.6;
-  display: block;
-  -webkit-border-radius: 100%;
-  border-radius: 100%;
-  -webkit-transform: translateY(60px);
-  -ms-transform: translateY(60px);
-  transform: translateY(60px);
-  -webkit-filter: blur(17px);
-  filter: blur(17px);
-  bottom: 5%;
-  left: 33%;
-}

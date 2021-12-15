@@ -1,31 +1,31 @@
 .tail {
-  width: 22vmin;
-  height: 46vmin;
+  width: 12%;
+  height: 75%;
   bottom: 0;
-  right: 16%;
-  border-radius: 0 0 14vmin;
+  left: 51%;
+  border-radius: 0 0 60px;
 }
 
 .tail::before {
-  width: 38vmin;
+  width: 180%;
   z-index: -1000;
-  aspect-ratio: 1;
+  height: 90%;
   transform: rotate(45deg);
   border-radius: 100%;
   top: -41%;
-  right: -73%;
+  left: 1%;
 }
 
 .tail::after {
-  width: 7vmin;
-  height: 44vmin;
+  width: 50%;
+  height: 100%;
 }
 
 /****/
 
 .body {
-  height: 30vmin;
-  width: 25vmin;
+  height: 55%;
+  width: 15%;
   left: 50%;
   transform: translate(-50%, 0);
   bottom: 0;
@@ -33,11 +33,11 @@
 }
 
 .ears {
-  width: 4vmin;
-  aspect-ratio: 1/2;
-  border-bottom-right-radius: 8vmin;
-  border-top-right-radius: 8vmin;
-  top: -26.5%;
+  width: 15%;
+  height: 20%;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+  top: -19.5%;
 }
 
 .ear-left {
@@ -46,12 +46,12 @@
 }
 
 .ear-right {
-  right: -16.25%;
+  right: -15.25%;
 }
 
 .eye {
-  width: 8vmin;
-  aspect-ratio: 1;
+  width: 30%;
+  height: 25%;
   background: white;
   overflow: hidden;
   top: 21%;
@@ -60,37 +60,37 @@
 }
 
 .eye::before {
-  width: 4vmin;
-  aspect-ratio: 1;
+  width: 50%;
+  height: 50%;
   background: var(--black);
   border-radius: 50%;
 }
 
 .nose {
   background: var(--black);
-  width: 2vmin;
-  height: 1vmin;
+  width: 8%;
+  height: 4%;
   left: 46%;
   transform: translate(-50%, 0);
   top: 51%;
-  border-radius: 0 0 2vmin 2vmin;
+  border-radius: 0 0 50% 50%;
 }
 
 .mouth {
-  width: 9vmin;
-  aspect-ratio: 2;
+  width: 30%;
+  height: 13%;
   background: white;
   border: 12px solid var(--black);
   border-top: 0px transparent;
   top: 60%;
-  right: 31%;
-  border-radius: 0 0 8vmin 8vmin;
+  left: 34%;
+  border-radius: 0 0 50px 50px;
 }
 
 .belly {
-  width: 14vmin;
-  aspect-ratio: 2;
-  border-radius: 14vmin 14vmin 0 0;
+  width: 60%;
+  height: 23%;
+  border-radius: 50px 50px 0 0;
   bottom: -1px;
   left: 21%;
   z-index: -1000;
@@ -98,13 +98,13 @@
 }
 
 .feet {
-  width: 7vmin;
-  aspect-ratio: 2;
-  border-radius: 7vmin 7vmin 0 0;
+  width: 20%;
+  height: 8%;
+  border-radius: 50px 50px 0 0;
   background: var(--black);
   bottom: -1px;
-  left: -7%;
-  box-shadow: 21vmin 0 var(--black);
+  left: 10%;
+  box-shadow: 16vmin 0 var(--black);
 }
 
 .shadow {

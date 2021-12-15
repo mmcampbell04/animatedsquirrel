@@ -1,19 +1,14 @@
 html,
 body {
-  overflow: hidden;
+  // overflow: hidden;
   background: var(--background);
 }
 
-.wrapper {
-  display: flex;
-}
-
 .cartoon {
-  position: relative;
-  width: 50vw;
-  height: 75vh;
+  position: absolute;
+  width: 60vmin;
+  height: 60vmin;
   top: 10%;
-  border: 1px solid black;
 }
 
 .cartoon div {
@@ -27,4 +22,24 @@ body {
   display: block;
   position: absolute;
   box-sizing: border-box;
+}
+
+@media (min-width: 320px) and (max-width: 528px) {
+  .cartoon-scary {
+    top: 55%;
+    left: 14%;
+  }
+}
+
+@media (min-width: 529px) and (max-width: 1000px) {
+  .cartoon-scary {
+    top: 60%;
+    left: 17%;
+  }
+}
+
+@media (min-width: 1001px) {
+  .cartoon-scary {
+    left: 47%;
+  }
 }

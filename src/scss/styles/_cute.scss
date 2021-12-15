@@ -34,6 +34,7 @@
 
   .eye {
     animation: blink 10s infinite ease-in-out;
+    -webkit-animation: blink 10s infinite ease-in-out;
     transition: all 0.1s ease-in-out;
   }
 

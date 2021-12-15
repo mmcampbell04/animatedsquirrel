@@ -1,13 +1,13 @@
 // CUTE SQUIRREL
 
 .cartoon-cute {
-  left: 10%;
+  left: -10%;
 
   .tail {
     background: var(--tail-cute);
   }
 
-  .tail::before {
+  .top-tail {
     background: conic-gradient(
       from 180deg,
       var(--tail-cute) 0,

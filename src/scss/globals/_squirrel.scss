@@ -1,19 +1,18 @@
 .tail {
-  width: 12%;
-  height: 75%;
-  bottom: 0;
-  left: 51%;
-  border-radius: 0 0 60px;
+  width: 25%;
+  height: 70%;
+  bottom: -1%;
+  left: 52%;
+  border-radius: 0 0 110px;
 }
 
-.tail::before {
-  width: 180%;
-  z-index: -1000;
-  height: 90%;
+.top-tail {
+  width: 45%;
+  height: 55%;
   transform: rotate(45deg);
   border-radius: 100%;
-  top: -41%;
-  left: 1%;
+  top: 3%;
+  left: 52.25%;
 }
 
 .tail::after {
@@ -24,12 +23,13 @@
 /****/
 
 .body {
-  height: 55%;
-  width: 15%;
+  height: 45%;
+  width: 30%;
   left: 50%;
   transform: translate(-50%, 0);
   bottom: 0;
   border-top-left-radius: 53%;
+  z-index: 2;
 }
 
 .ears {
@@ -63,7 +63,7 @@
   width: 50%;
   height: 50%;
   background: var(--black);
-  border-radius: 50%;
+  border-radius: 100%;
 }
 
 .nose {
@@ -89,11 +89,10 @@
 
 .belly {
   width: 60%;
-  height: 23%;
-  border-radius: 50px 50px 0 0;
+  height: 21%;
+  border-radius: 100px 100px 0 0;
   bottom: -1px;
   left: 21%;
-  z-index: -1000;
   background: var(--belly-cute);
 }
 
